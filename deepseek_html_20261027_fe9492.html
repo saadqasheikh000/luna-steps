@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary Meta Tags -->
+    <title>Luna Steps | Elegant Women's Shoes</title>
+    <meta name="title" content="Luna Steps | Elegant Women's Shoes">
+    <meta name="description" content="Discover Luna Steps — premium women's footwear. Shop heels, flats, sneakers & boots. Free shipping on orders over $75. Step into comfort and style.">
+    <meta name="keywords" content="women's shoes, heels, flats, sneakers, boots, footwear, elegant shoes, comfortable shoes, women's fashion">
+    <meta name="author" content="Luna Steps">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Luna Steps | Elegant Women's Shoes">
+    <meta property="og:description" content="Premium women's footwear — heels, flats, sneakers & boots. Free shipping over $75.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.lunasteps.com/">
+    <meta property="og:image" content="https://www.lunasteps.com/images/social-preview.jpg">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+            line-height: 1.6;
+            color: #2e2e2e;
+            background-color: #fefcf9;
+        }
+
+        /* ============================================= */
+        /* ============= ANNOUNCEMENT BAR ============== */
+        /* ============================================= */
+        .announcement-bar {
+            background: #2e1e18;
+            color: #f0e6e0;
+            text-align: center;
+            padding: 0.6rem 5%;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+
+        .announcement-bar i {
+            color: #dcc1b2;
+            margin-right: 6px;
+        }
+
+        /* ============================================= */
+        /* ================= NAVBAR ==================== */
+        /* ============================================= */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.1rem 5%;
+            background: #ffffff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            flex-wrap: wrap;
+            border-bottom: 1px solid #f0e7e0;
+        }
+
+        .logo {
+            font-size: 1.9rem;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            color: #3b2e2a;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #b8836c;
+            font-weight: 300;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #3b2e2a;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.2s ease;
+            position: relative;
+            padding: 0.3rem 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background-color: #b8836c;
+            transition: width 0.25s ease;
+        }
+
+        .nav-links a:hover {
+            color: #b8836c;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a.active {
+            color: #b8836c;
+        }
+
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .nav-icons {
+            display: flex;
+            align-items: center;
+            gap: 1.6rem;
+            font-size: 1.25rem;
+            color: #3b2e2a;
+        }
+
+        .nav-icons i {
+            cursor: pointer;
+            transition: color 0.2s, transform 0.15s;
+        }
+
+        .nav-icons i:hover {
+            color: #b8836c;
+            transform: translateY(-2px);
+        }
+
+        .cart-icon {
+            position: relative;
+        }
+
+        .cart-badge {
+            position: absolute;
+            top: -8px;
+            right: -10px;
+            background: #b8836c;
+            color: #fff;
+            font-size: 0.65rem;
+            font-weight: 700;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.4rem;
+            color: #3b2e2a;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* ============================================= */
+        /* ============= HEADER / HERO ================= */
+        /* ============================================= */
+        .header-hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 3rem 5% 3.5rem;
+            background: linear-gradient(145deg, #fff8f3 0%, #f7ede7 100%);
+            border-bottom: 1px solid #efe2d9;
+            gap: 2rem;
+        }
+
+        .hero-content {
+            flex: 1 1 45%;
+            max-width: 600px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: #dcc1b2;
+            color: #2e1e18;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 0.4rem 1rem;
+            border-radius: 30px;
+            margin-bottom: 1.5rem;
+        }
+
+        .header-hero h1 {
+            font-size: 3.2rem;
+            line-height: 1.2;
+            font-weight: 600;
+            color: #2e1e18;
+            margin-bottom: 1.2rem;
+        }
+
+        .header-hero h1 i {
+            color: #b8836c;
+            font-style: normal;
+            font-weight: 300;
+        }
+
+        .hero-text {
+            font-size: 1.15rem;
+            color: #5a4a42;
+            margin-bottom: 2rem;
+            max-width: 480px;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: #3b2e2a;
+            color: #fff;
+            text-decoration: none;
+            padding: 0.9rem 2.4rem;
+            border-radius: 40px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 8px 18px rgba(59, 46, 42, 0.15);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary:hover {
+            background: #b8836c;
+            transform: translateY(-2px);
+        }
+
+        .hero-image {
+            flex: 1 1 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 480px;
+            height: auto;
+            border-radius: 30px;
+            box-shadow: 0 25px 40px rgba(139, 95, 70, 0.15);
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .hero-image img:hover {
+            transform: scale(1.02) rotate(-1deg);
+        }
+
+        /* ============================================= */
+        /* ============ FEATURED PRODUCTS ============== */
+        /* ============================================= */
+        .featured {
+            padding: 4rem 5% 2rem;
+            text-align: center;
+        }
+
+        .featured h2 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            color: #2e1e18;
+            margin-bottom: 0.5rem;
+        }
+
+        .featured .subhead {
+            color: #7f6b60;
+            margin-bottom: 2.8rem;
+            font-size: 1.05rem;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: #ffffff;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+            transition: all 0.25s ease;
+            border: 1px solid #f1e6df;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 30px rgba(184, 131, 108, 0.12);
+            border-color: #dcc1b2;
+        }
+
+        .product-img {
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+            background: #faf3ef;
+        }
+
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .product-card:hover .product-img img {
+            transform: scale(1.08);
+        }
+
+        .product-info {
+            padding: 1.3rem 1.2rem 1.5rem;
+        }
+
+        .product-info h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #2e1e18;
+            margin-bottom: 0.4rem;
+        }
+
+        .product-price {
+            font-weight: 500;
+            color: #b8836c;
+            font-size: 1.15rem;
+            margin-bottom: 1.1rem;
+        }
+
+        .product-price small {
+            font-size: 0.85rem;
+            color: #a58f83;
+            font-weight: 400;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1.5px solid #dcc1b2;
+            color: #3b2e2a;
+            padding: 0.55rem 1.2rem;
+            border-radius: 30px;
+            font-weight: 500;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            width: 100%;
+        }
+
+        .btn-outline:hover {
+            background: #b8836c;
+            border-color: #b8836c;
+            color: white;
+        }
+
+        /* ============================================= */
+        /* ================ FOOTER ===================== */
+        /* ============================================= */
+        .footer {
+            background: #2e1e18;
+            color: #cbb9ae;
+            padding: 3.5rem 5% 0;
+            margin-top: 4rem;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1.4fr;
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid rgba(220, 193, 178, 0.15);
+        }
+
+        .footer-col h4 {
+            color: #f0e6e0;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .footer-col p {
+            font-size: 0.9rem;
+            line-height: 1.8;
+            color: #b8a69b;
+        }
+
+        .footer-logo {
+            font-size: 1.7rem;
+            font-weight: 600;
+            color: #f0e6e0;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .footer-logo span {
+            color: #b8836c;
+            font-weight: 300;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.65rem;
+        }
+
+        .footer-col ul li a {
+            color: #b8a69b;
+            text-decoration: none;
+            font-size: 0.92rem;
+            transition: color 0.2s, padding-left 0.2s;
+            display: inline-block;
+        }
+
+        .footer-col ul li a:hover {
+            color: #dcc1b2;
+            padding-left: 4px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 0.9rem;
+            margin-top: 1.2rem;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            background: rgba(220, 193, 178, 0.1);
+            border-radius: 50%;
+            color: #dcc1b2;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: all 0.25s;
+        }
+
+        .social-icons a:hover {
+            background: #b8836c;
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        /* Newsletter */
+        .newsletter-form {
+            display: flex;
+            margin-top: 1rem;
+            border-radius: 40px;
+            overflow: hidden;
+            border: 1px solid rgba(220, 193, 178, 0.25);
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 0.75rem 1.1rem;
+            border: none;
+            background: rgba(255, 255, 255, 0.05);
+            color: #f0e6e0;
+            font-size: 0.88rem;
+            outline: none;
+            font-family: inherit;
+        }
+
+        .newsletter-form input::placeholder {
+            color: #8f7d72;
+        }
+
+        .newsletter-form button {
+            background: #b8836c;
+            border: none;
+            color: #fff;
+            padding: 0 1.3rem;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.2s;
+        }
+
+        .newsletter-form button:hover {
+            background: #a06f58;
+        }
+
+        /* Payment / Bottom bar */
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.85rem;
+            color: #8f7d72;
+        }
+
+        .footer-bottom p i {
+            color: #b8836c;
+            margin: 0 2px;
+        }
+
+        .payment-icons {
+            display: flex;
+            gap: 1rem;
+            font-size: 1.5rem;
+            color: #b8a69b;
+        }
+
+        /* ============================================= */
+        /* ================= RESPONSIVE ================ */
+        /* ============================================= */
+        @media (max-width: 950px) {
+            .footer-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 850px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                gap: 0;
+                margin-top: 0.8rem;
+                border-top: 1px solid #f0e7e0;
+                padding-top: 0.8rem;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-links li {
+                width: 100%;
+                padding: 0.4rem 0;
+            }
+
+            .navbar {
+                padding: 1rem 5%;
+            }
+
+            .header-hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding: 2rem 5% 2.8rem;
+            }
+
+            .hero-content {
+                max-width: 100%;
+            }
+
+            .hero-text {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .header-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .footer-bottom {
+                justify-content: center;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-hero h1 {
+                font-size: 2rem;
+            }
+
+            .nav-icons {
+                gap: 1rem;
+                font-size: 1.1rem;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+            }
+
+            .product-img {
+                height: 160px;
+            }
+
+            .product-info {
+                padding: 1rem 0.8rem;
+            }
+
+            .footer {
+                padding: 2.5rem 5% 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================= -->
+    <!-- ============= ANNOUNCEMENT BAR ============== -->
+    <!-- ============================================= -->
+    <div class="announcement-bar">
+        <i class="fas fa-truck"></i> Free shipping on orders over $75 — Shop the new season styles today!
+    </div>
+
+    <!-- ============================================= -->
+    <!-- ================= NAVBAR ==================== -->
+    <!-- ============================================= -->
+    <nav class="navbar">
+        <a href="#" class="logo">Luna <span>Steps</span></a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Heels</a></li>
+            <li><a href="#">Flats</a></li>
+            <li><a href="#">Boots</a></li>
+            <li><a href="#">Sale</a></li>
+        </ul>
+
+        <div class="nav-icons">
+            <i class="fas fa-search" aria-label="Search"></i>
+            <i class="fas fa-user" aria-label="Account"></i>
+            <span class="cart-icon">
+                <i class="fas fa-shopping-bag" aria-label="Cart"></i>
+                <span class="cart-badge">3</span>
+            </span>
+        </div>
+    </nav>
+
+    <!-- ============================================= -->
+    <!-- ============= HEADER / HERO ================= -->
+    <!-- ============================================= -->
+    <header class="header-hero">
+        <div class="hero-content">
+            <span class="hero-badge"><i class="fas fa-star" style="font-size: 0.7rem; margin-right: 4px;"></i> new collection</span>
+            <h1>Step into <i>elegance</i> & comfort</h1>
+            <p class="hero-text">
+                Discover women's shoes that blend timeless design with all‑day comfort. 
+                From statement heels to everyday flats — find your perfect pair.
+            </p>
+            <a href="#" class="btn-primary"><i class="fas fa-shopping-bag" style="margin-right: 8px;"></i> Shop now</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=800&q=80" alt="Elegant women's heels from Luna Steps">
+        </div>
+    </header>
+
+    <!-- ============================================= -->
+    <!-- ============ FEATURED PRODUCTS ============== -->
+    <!-- ============================================= -->
+    <section class="featured">
+        <h2>Bestsellers</h2>
+        <p class="subhead">Loved by our customers — handpicked for you</p>
+        <div class="product-grid">
+
+            <!-- Nude Pump -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1596703263926-eb0762ee17e4?w=600&q=80" alt="Nude pump heels">
+                </div>
+                <div class="product-info">
+                    <h3>Nude Pump</h3>
+                    <div class="product-price">$89 <small>USD</small></div>
+                    <button class="btn-outline">View details</button>
+                </div>
+            </div>
+
+            <!-- Ballet Flat -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1560343090-f0409e92791a?w=600&q=80" alt="Ballet flat shoes">
+                </div>
+                <div class="product-info">
+                    <h3>Ballet Flat</h3>
+                    <div class="product-price">$69 <small>USD</small></div>
+                    <button class="btn-outline">View details</button>
+                </div>
+            </div>
+
+            <!-- Chunky Sneaker -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=600&q=80" alt="Chunky women's sneaker">
+                </div>
+                <div class="product-info">
+                    <h3>Chunky Sneaker</h3>
+                    <div class="product-price">$95 <small>USD</small></div>
+                    <button class="btn-outline">View details</button>
+                </div>
+            </div>
+
+            <!-- Ankle Boot -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=600&q=80" alt="Women's ankle boot">
+                </div>
+                <div class="product-info">
+                    <h3>Ankle Boot</h3>
+                    <div class="product-price">$120 <small>USD</small></div>
+                    <button class="btn-outline">View details</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- ================ FOOTER ===================== -->
+    <!-- ============================================= -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Brand Column -->
+            <div class="footer-col">
+                <a href="#" class="footer-logo">Luna <span>Steps</span></a>
+                <p>
+                    Elegant, comfortable, and crafted for the modern woman. 
+                    At Luna Steps, we believe every step should feel as good as it looks.
+                </p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <!-- Shop Links -->
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="#">Heels</a></li>
+                    <li><a href="#">Flats</a></li>
+                    <li><a href="#">Sneakers</a></li>
+                    <li><a href="#">Boots</a></li>
+                    <li><a href="#">Sale</a></li>
+                </ul>
+            </div>
+
+            <!-- Help Links -->
+            <div class="footer-col">
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Track Order</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="footer-col">
+                <h4>Stay in Step</h4>
+                <p>Subscribe for early access to new drops, exclusive offers & style tips.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thanks for subscribing! 💌');">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" aria-label="Subscribe">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+            <p>© 2025 Luna Steps — Women's footwear, reimagined. <i class="fas fa-heart"></i> All rights reserved.</p>
+            <div class="payment-icons">
+                <i class="fab fa-cc-visa" title="Visa"></i>
+                <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                <i class="fab fa-cc-paypal" title="PayPal"></i>
+                <i class="fab fa-cc-apple-pay" title="Apple Pay"></i>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================= -->
+    <!-- ============= MOBILE MENU SCRIPT ============ -->
+    <!-- ============================================= -->
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+            const icon = menuToggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+    </script>
+
+</body>
+</html>
